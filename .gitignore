@@ -3,5 +3,7 @@
 .idea/Homework6-ImagePostingBoard.iml
 .idea/modules.xml
 .idea/workspace.xml
-image-board/
+
 package.json
+node_modules/
+

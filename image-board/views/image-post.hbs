@@ -1,0 +1,24 @@
+
+
+<h2>{{imagepost.title}}</h2>
+
+
+<form method="post" action="/remove-image/{{imagepost.slug}}">
+<ul>
+    {{#each images}}
+        <li>
+            <input type="checkbox" name="checkedImgs" value="{{this._id}}">
+            <span>{{this.caption}}</span><br>
+            <img src="{{this.url}}">
+        </li>
+    {{/each}}
+</ul>
+<input type="submit" value="Delete Checked"><br>
+</form>
+<form method="post" action="/add-image/{{imagepost.slug}}">
+    url<input type="text" name="newUrl" required> caption<input type="text" name="newCaption"><br>
+    <input type="submit" value="Add Another">
+</form>
+
+
+

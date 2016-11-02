@@ -6,12 +6,12 @@ var mongoose = require('mongoose'),
 
 //my schema goes here
 var Image  = new mongoose.Schema({
-    caption : {type: String, required: true},
-    url : {type: String, required:true}
+    caption : String,//{type: String, required: true},
+    url : String //{type: String, required:true}
 });
 
 var ImagePost  = new mongoose.Schema({
-   title : {type: String, required: true},
+   title : {type: String, unique: true},
     images : [Image]
 });
 
