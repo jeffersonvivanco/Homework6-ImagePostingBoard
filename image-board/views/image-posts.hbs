@@ -1,5 +1,6 @@
-
+<a href="/image-posts/{{username}}"><i class="fa fa-home fa-4x" aria-hidden="true" style="color: black"></i></a>
 <br><br>
+<h2>User: {{username}}</h2><a href="/logout">Logout</a><br><br>
 <form method="post" action="/adding-imagepost">
     Image Post Title: <input type="text" name="title" required><br>
     Image 1 URL: <input type="text" name="image1URL"> Caption<input type="text"name="image1Caption"> <br>
@@ -13,7 +14,7 @@
         <li>
             <h1><a href="/image-post/{{this.slug}}">{{this.title}}</a></h1>
             <ul>
-                {{#each images}}
+                {{#each this.images}}
                     <li>
                         <h3>{{this.caption}}</h3>
                         <img src={{this.url}}>
