@@ -34,8 +34,7 @@ router.post('/adding-imagepost',function (req, res, next) {
 
   var imagepost = new ImagePost({
     title : req.body.title,
-    user:req.user._id,
-    username : user.username
+    user:req.user._id
   });
   for(var n=1; n<=3; n++){
     var caption = req.body['image'+n+'Caption'];
